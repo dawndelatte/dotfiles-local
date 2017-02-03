@@ -1,0 +1,31 @@
+[github]
+  user = dawndelatte
+[alias]
+  c = commit
+  l = log
+  a = add
+  m = merge --ff-only
+  aa= !git add -u && git add . && git status
+  d = diff
+  ps = push
+  pr = pull --rebase
+  st = status
+  cm = commit -m
+  ca = commit --amend
+  cleanup = !git remote prune origin && git gc && git clean -dfx && git stash clear
+  up = !git fetch origin && git rebase origin/master
+  unfuck = reset --hard HEAD
+  ununfuck = reset --hard HEAD~1
+  co = checkout
+  cp = cherry-pick
+[user]
+  name = Dawn Delatte
+  email = dawndelatte@gmail.com
+[branch "master"]
+  rebase = true
+[remote "origin"]
+  push = HEAD
+[diff]
+  tool = vimdiff
+[difftool]
+  prompt = false
